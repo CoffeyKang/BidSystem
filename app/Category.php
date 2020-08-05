@@ -12,7 +12,6 @@ class Category extends Model
      */
     protected $table = 'categories';
 
-
    /**
      * Scope a query to sort categories name.
      *
@@ -24,7 +23,6 @@ class Category extends Model
     {
         return $query->orderBy('name');
     }
-
 
     /**
      * HasMany reslation ship

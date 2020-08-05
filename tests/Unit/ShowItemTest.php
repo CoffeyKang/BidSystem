@@ -5,9 +5,11 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use App\Exceptions\BidException;
 use App\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ShowItemTest extends TestCase
 {   
+    use RefreshDatabase;
     /**
      * @var Item $item
      */

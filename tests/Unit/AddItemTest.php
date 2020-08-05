@@ -4,9 +4,11 @@ namespace Tests\Unit;
 
 use Illuminate\Support\Str;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class AddItemTest extends TestCase
 {   
+    use RefreshDatabase;
     /** 
      * @var Array
      */
@@ -16,7 +18,6 @@ class AddItemTest extends TestCase
      * @var Category
      */
     public $newCategory;
-
 
     /**
      * some basic config for adding new item

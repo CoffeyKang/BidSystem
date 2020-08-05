@@ -45,7 +45,6 @@ class Item extends Model
         return $this->belongsTo('App\Category');
     }
 
-
     public function bids(): HasMany
     {
         return $this->hasMany('App\BidForItem', 'item_id', 'id');

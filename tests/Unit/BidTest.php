@@ -7,10 +7,11 @@ use App\Item;
 use App\Category;
 use App\User;
 use App\Exceptions\BidException;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class BidTest extends TestCase
 {   
-
+    use RefreshDatabase;
     /**
      * @var User
      */
@@ -62,12 +63,9 @@ class BidTest extends TestCase
         $this->bidService = app()->make(\App\Interfaces\BidInterface::class);
 
     }
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
-    public function testExample()
+    
+    /** @test */
+    public function can_bid_for_item_test()
     {      
         try{
             $this->bidService->bid($this->singleUser->id, $this->singleItem->id, $this->amount);
